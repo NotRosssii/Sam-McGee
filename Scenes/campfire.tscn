@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://d18yyw8fyfey3"]
+
+[ext_resource type="PackedScene" uid="uid://d3vhjt6m5ns5v" path="res://Assets/models/campfire/campfire.glb" id="1_1xapn"]
+[ext_resource type="Texture2D" uid="uid://dfci7g16wb7a8" path="res://Assets/models/campfire/fire.png" id="2_teyro"]
+
+[sub_resource type="Curve" id="Curve_1c66v"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.237374, 0.993714), 0.0, 0.0, 0, 0, Vector2(0.568182, 0.635396), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_572ar"]
+curve = SubResource("Curve_1c66v")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_a1oc3"]
+angle_min = -50.0
+angle_max = 50.0
+direction = Vector3(0, 1, 0)
+spread = 5.0
+initial_velocity_min = 1.0
+initial_velocity_max = 1.0
+angular_velocity_min = -1.60933e-05
+angular_velocity_max = -1.60933e-05
+gravity = Vector3(0, 0, 0)
+linear_accel_min = 0.999998
+linear_accel_max = 0.999998
+scale_min = 1.5
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_572ar")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hq8da"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_teyro")
+texture_filter = 0
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_b5uxd"]
+material = SubResource("StandardMaterial3D_hq8da")
+
+[node name="campfire" instance=ExtResource("1_1xapn")]
+
+[node name="flames" type="GPUParticles3D" parent="campfire" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3677, 0)
+process_material = SubResource("ParticleProcessMaterial_a1oc3")
+draw_pass_1 = SubResource("QuadMesh_b5uxd")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="campfire" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.291, 0)
+light_color = Color(1, 0.490776, 0.0421108, 1)
+light_energy = 1.5
+light_size = 1.0
+light_specular = 0.0
+distance_fade_enabled = true

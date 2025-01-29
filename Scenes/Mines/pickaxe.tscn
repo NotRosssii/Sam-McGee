@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://hwqv0feb13im"]
+
+[ext_resource type="PackedScene" uid="uid://bn8t2gr020i8o" path="res://Assets/models/Mines/pickaxe.glb" id="1_6wlrl"]
+
+[node name="pickaxe" instance=ExtResource("1_6wlrl")]

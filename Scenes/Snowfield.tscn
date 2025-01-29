@@ -1,0 +1,269 @@
+[gd_scene load_steps=68 format=3 uid="uid://dp1ntq5006gjs"]
+
+[ext_resource type="Environment" uid="uid://co2p8xyvrd838" path="res://Scenes/Enviroments/Snowfield.tres" id="1_mr7t8"]
+[ext_resource type="PackedScene" uid="uid://dyku1qhfeu8x3" path="res://Scenes/player.tscn" id="2_aib3g"]
+[ext_resource type="Texture2D" uid="uid://dhb0sfcbetxov" path="res://Assets/textures/Snow/Snow_Color.png" id="2_d76qt"]
+[ext_resource type="PackedScene" uid="uid://bupd44d8poepp" path="res://Scenes/ui.tscn" id="3_av43c"]
+[ext_resource type="PackedScene" uid="uid://c8axr8u7rvynf" path="res://Scenes/key.tscn" id="4_d071m"]
+[ext_resource type="Texture2D" uid="uid://cbqu5mkohk6io" path="res://Assets/textures/Snow/Snow_N.png" id="4_q5hr2"]
+[ext_resource type="MeshLibrary" uid="uid://majsk2c3xh27" path="res://Assets/Mesh Libraries/cross.tres" id="5_ds4iq"]
+[ext_resource type="Texture2D" uid="uid://cvak54n8ub66v" path="res://Assets/textures/Snow/Snow_R.png" id="5_yvxas"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/TextureSetResource.cs" id="6_qfqf1"]
+[ext_resource type="MeshLibrary" uid="uid://cxvsrquhpdwlp" path="res://Assets/Mesh Libraries/fence.tres" id="6_v0by5"]
+[ext_resource type="Texture2D" uid="uid://deh3k1envjffy" path="res://Assets/textures/Ice/Ice_Color.png" id="7_dpj5g"]
+[ext_resource type="PackedScene" uid="uid://bxyxkvaktljwr" path="res://Assets/models/Graveyard/coffin.glb" id="7_pyt0p"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/TextureSetsResource.cs" id="7_unpyt"]
+[ext_resource type="PackedScene" uid="uid://6ci7f8upscc1" path="res://Scenes/Graveyard/church.tscn" id="8_upsnh"]
+[ext_resource type="PackedScene" uid="uid://d18yyw8fyfey3" path="res://Scenes/campfire.tscn" id="9_1wuih"]
+[ext_resource type="Texture2D" uid="uid://cwnvco77pscuj" path="res://Assets/textures/Ice/Ice_N.png" id="9_fw63w"]
+[ext_resource type="Texture2D" uid="uid://df0kqlg2ssftd" path="res://Assets/textures/Ground/Ground_Color.png" id="9_kylt8"]
+[ext_resource type="Texture2D" uid="uid://dg7fr0xpsetwa" path="res://Scenes/Snowfield/Splatmap_0_0_0.res" id="9_yi8tp"]
+[ext_resource type="Texture2D" uid="uid://yt17s3fetp0q" path="res://Assets/textures/Ground/Ground_N.png" id="10_mte2k"]
+[ext_resource type="Texture2D" uid="uid://dhlscv3ivqir3" path="res://Assets/textures/Ice/Ice_R.png" id="10_t2ord"]
+[ext_resource type="PackedScene" uid="uid://c8gqu55633ebh" path="res://Scenes/warmth.tscn" id="10_yaels"]
+[ext_resource type="PackedScene" uid="uid://b3g6li7xkqbra" path="res://Scenes/Mines/workbench.tscn" id="11_1ddc0"]
+[ext_resource type="Texture2D" uid="uid://d2uv0n8toitfm" path="res://Assets/textures/Ground/Ground_R.png" id="11_l1d07"]
+[ext_resource type="PackedScene" uid="uid://byjg3s80f3gv5" path="res://Scenes/Mines/dynamite.tscn" id="12_q1vv3"]
+[ext_resource type="Texture2D" uid="uid://77ngn4lj3dcm" path="res://Scenes/Snowfield/Splatmap_0_-1_0.res" id="12_tse1o"]
+[ext_resource type="PackedScene" uid="uid://bmh06svwsaoyw" path="res://Scenes/Mines/minecaft.tscn" id="13_j5m1e"]
+[ext_resource type="PackedScene" uid="uid://hwqv0feb13im" path="res://Scenes/Mines/pickaxe.tscn" id="14_8lvh5"]
+[ext_resource type="Texture2D" uid="uid://dh3t0rk1513rd" path="res://Scenes/Snowfield/Splatmap_1_0_0.res" id="14_i65kt"]
+[ext_resource type="PackedScene" uid="uid://doalt6j2arrca" path="res://Scenes/Mines/shovel.tscn" id="15_fwhy2"]
+[ext_resource type="Texture2D" uid="uid://cs5unkmoo1whe" path="res://Scenes/Snowfield/Splatmap_1_-1_0.res" id="16_iunad"]
+[ext_resource type="PackedScene" uid="uid://cpkjbd4rbobb5" path="res://Scenes/Store/store.tscn" id="16_o0vy0"]
+[ext_resource type="Script" path="res://addons/terrabrush/TerraBrush.cs" id="17_yvu6a"]
+[ext_resource type="Texture2D" uid="uid://cnugxionc1732" path="res://Scenes/Snowfield/Heightmap_0_0.res" id="18_b75tk"]
+[ext_resource type="Texture2D" uid="uid://byh80aax14a7m" path="res://Scenes/Snowfield/Splatmap_-1_-1_0.res" id="18_oick0"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/ZoneResource.cs" id="19_ijtm7"]
+[ext_resource type="Texture2D" uid="uid://by1vpo38tsuhy" path="res://Scenes/Snowfield/Heightmap_0_-1.res" id="20_jui4i"]
+[ext_resource type="Texture2D" uid="uid://do50alckob8vf" path="res://Scenes/Snowfield/Splatmap_-1_0_0.res" id="20_onp4s"]
+[ext_resource type="Script" path="res://addons/terrabrush/Scripts/EditorResources/ZonesResource.cs" id="20_th1q8"]
+[ext_resource type="Texture2D" uid="uid://0i6p3yty1vuv" path="res://Scenes/Snowfield/Heightmap_1_0.res" id="21_4t24i"]
+[ext_resource type="Texture2D" uid="uid://wby8bh52pp0u" path="res://Scenes/Snowfield/Heightmap_1_-1.res" id="22_7m1tv"]
+[ext_resource type="Texture2D" uid="uid://c12otr2s2pe6d" path="res://Scenes/Snowfield/Splatmap_-1_1_0.res" id="22_7w2me"]
+[ext_resource type="Texture2D" uid="uid://baehku4ebdbks" path="res://Scenes/Snowfield/Heightmap_-1_-1.res" id="23_jtf55"]
+[ext_resource type="Texture2D" uid="uid://ck1ra7g6fqaxc" path="res://Scenes/Snowfield/Heightmap_-1_0.res" id="24_11etg"]
+[ext_resource type="Texture2D" uid="uid://d2y5ibqj3vfmx" path="res://Scenes/Snowfield/Splatmap_0_1_0.res" id="24_12e83"]
+[ext_resource type="Texture2D" uid="uid://bxvglwbvyi0r7" path="res://Scenes/Snowfield/Heightmap_-1_1.res" id="25_4785s"]
+[ext_resource type="Texture2D" uid="uid://b6x1xywa72ofo" path="res://Scenes/Snowfield/Heightmap_0_1.res" id="26_d7jda"]
+[ext_resource type="Texture2D" uid="uid://b0tqm1daa0fql" path="res://Scenes/Snowfield/Splatmap_1_1_0.res" id="26_wsh1j"]
+[ext_resource type="Texture2D" uid="uid://cijtuvurp60an" path="res://Scenes/Snowfield/Heightmap_1_1.res" id="27_yxnro"]
+[ext_resource type="Texture2D" uid="uid://cdh3jxagfv6yo" path="res://Scenes/Snowfield/Heightmap_-2_0.res" id="32_7poag"]
+[ext_resource type="Texture2D" uid="uid://drk5skf11lol7" path="res://Scenes/Snowfield/Splatmap_-2_0_0.res" id="33_lyln5"]
+[ext_resource type="PackedScene" uid="uid://dakse1kgrq6mi" path="res://Scenes/Housing/cabin_open.tscn" id="51_admqt"]
+[ext_resource type="PackedScene" uid="uid://duuayuvwuevaw" path="res://Scenes/Housing/cabin_blocked.tscn" id="52_6yguv"]
+
+[sub_resource type="Resource" id="Resource_itm8p"]
+script = ExtResource("6_qfqf1")
+Name = "Snow"
+AlbedoTexture = ExtResource("2_d76qt")
+NormalTexture = ExtResource("4_q5hr2")
+RoughnessTexture = ExtResource("5_yvxas")
+TextureDetail = -1
+
+[sub_resource type="Resource" id="Resource_3tjjb"]
+script = ExtResource("6_qfqf1")
+Name = "Ice"
+AlbedoTexture = ExtResource("7_dpj5g")
+NormalTexture = ExtResource("9_fw63w")
+RoughnessTexture = ExtResource("10_t2ord")
+TextureDetail = -1
+
+[sub_resource type="Resource" id="Resource_weiy8"]
+script = ExtResource("6_qfqf1")
+Name = "Dirt"
+AlbedoTexture = ExtResource("9_kylt8")
+NormalTexture = ExtResource("10_mte2k")
+RoughnessTexture = ExtResource("11_l1d07")
+TextureDetail = -1
+
+[sub_resource type="Resource" id="Resource_mcx1l"]
+script = ExtResource("7_unpyt")
+TextureSets = [SubResource("Resource_itm8p"), SubResource("Resource_3tjjb"), SubResource("Resource_weiy8")]
+
+[sub_resource type="Resource" id="Resource_gbcw5"]
+script = ExtResource("19_ijtm7")
+ZonePosition = Vector2i(0, 0)
+HeightMapTexture = ExtResource("18_b75tk")
+SplatmapsTexture = [ExtResource("9_yi8tp")]
+FoliagesTexture = []
+ObjectsTexture = []
+
+[sub_resource type="Resource" id="Resource_8hqhc"]
+script = ExtResource("19_ijtm7")
+ZonePosition = Vector2i(-1, 0)
+HeightMapTexture = ExtResource("24_11etg")
+SplatmapsTexture = [ExtResource("20_onp4s")]
+FoliagesTexture = []
+ObjectsTexture = []
+
+[sub_resource type="Resource" id="Resource_uenfq"]
+script = ExtResource("19_ijtm7")
+ZonePosition = Vector2i(0, -1)
+HeightMapTexture = ExtResource("20_jui4i")
+SplatmapsTexture = [ExtResource("12_tse1o")]
+FoliagesTexture = []
+ObjectsTexture = []
+
+[sub_resource type="Resource" id="Resource_vxdv5"]
+script = ExtResource("19_ijtm7")
+ZonePosition = Vector2i(-1, -1)
+HeightMapTexture = ExtResource("23_jtf55")
+SplatmapsTexture = [ExtResource("18_oick0")]
+FoliagesTexture = []
+ObjectsTexture = []
+
+[sub_resource type="Resource" id="Resource_5tboa"]
+script = ExtResource("19_ijtm7")
+ZonePosition = Vector2i(1, -1)
+HeightMapTexture = ExtResource("22_7m1tv")
+SplatmapsTexture = [ExtResource("16_iunad")]
+FoliagesTexture = []
+ObjectsTexture = []
+
+[sub_resource type="Resource" id="Resource_r51v1"]
+script = ExtResource("19_ijtm7")
+ZonePosition = Vector2i(1, 0)
+HeightMapTexture = ExtResource("21_4t24i")
+SplatmapsTexture = [ExtResource("14_i65kt")]
+FoliagesTexture = []
+ObjectsTexture = []
+
+[sub_resource type="Resource" id="Resource_lbtps"]
+script = ExtResource("19_ijtm7")
+ZonePosition = Vector2i(0, 1)
+HeightMapTexture = ExtResource("26_d7jda")
+SplatmapsTexture = [ExtResource("24_12e83")]
+FoliagesTexture = []
+ObjectsTexture = []
+
+[sub_resource type="Resource" id="Resource_aniov"]
+script = ExtResource("19_ijtm7")
+ZonePosition = Vector2i(1, 1)
+HeightMapTexture = ExtResource("27_yxnro")
+SplatmapsTexture = [ExtResource("26_wsh1j")]
+FoliagesTexture = []
+ObjectsTexture = []
+
+[sub_resource type="Resource" id="Resource_3yb04"]
+script = ExtResource("19_ijtm7")
+ZonePosition = Vector2i(-1, 1)
+HeightMapTexture = ExtResource("25_4785s")
+SplatmapsTexture = [ExtResource("22_7w2me")]
+FoliagesTexture = []
+ObjectsTexture = []
+
+[sub_resource type="Resource" id="Resource_tyr38"]
+script = ExtResource("19_ijtm7")
+ZonePosition = Vector2i(-2, 0)
+HeightMapTexture = ExtResource("32_7poag")
+SplatmapsTexture = [ExtResource("33_lyln5")]
+FoliagesTexture = []
+ObjectsTexture = []
+
+[sub_resource type="Resource" id="Resource_xiuve"]
+script = ExtResource("20_th1q8")
+Zones = [SubResource("Resource_gbcw5"), SubResource("Resource_8hqhc"), SubResource("Resource_uenfq"), SubResource("Resource_vxdv5"), SubResource("Resource_5tboa"), SubResource("Resource_r51v1"), SubResource("Resource_lbtps"), SubResource("Resource_aniov"), SubResource("Resource_3yb04"), SubResource("Resource_tyr38")]
+
+[node name="Snowfield" type="Node3D"]
+transform = Transform3D(0.999997, -0.00140184, -0.00197752, 0.00139499, 0.999993, -0.00346025, 0.00198236, 0.00345748, 0.999992, 0, 0, 0)
+
+[node name="TerraBrush" type="Node3D" parent="."]
+transform = Transform3D(1, -1.0732e-10, 0, 1.37334e-10, 1, 0, -2.32831e-10, -2.32831e-10, 1, 0, 0, 0)
+script = ExtResource("17_yvu6a")
+DataPath = "res://Scenes/Snowfield"
+TextureSets = SubResource("Resource_mcx1l")
+UseAntiTile = false
+NearestTextureFilter = true
+TerrainZones = SubResource("Resource_xiuve")
+metadata/_edit_lock_ = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_mr7t8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.846062, 0.463557, -0.263239, 0.00354688, 0.498687, 0.866775, 0.533073, 0.732412, -0.423564, 0.0111311, 7.97925, -0.0276104)
+shadow_enabled = true
+shadow_opacity = 0.81
+
+[node name="Player" parent="." instance=ExtResource("2_aib3g")]
+transform = Transform3D(1, -1.04228e-09, 0, 1.06229e-09, 1, 0, -2.09548e-09, -2.09548e-09, 1, -5.28106, 0.981074, 0.00707696)
+
+[node name="Control" parent="Player" instance=ExtResource("3_av43c")]
+
+[node name="key" parent="." instance=ExtResource("4_d071m")]
+transform = Transform3D(1, -1.15915e-09, -9.31323e-10, 7.15772e-10, 1, 9.31323e-10, -1.39698e-09, -2.32831e-09, 1, -5.67534, -1.4975, -41.1873)
+
+[node name="Graveyard" type="Node3D" parent="."]
+
+[node name="Crosses" type="GridMap" parent="Graveyard"]
+transform = Transform3D(1, -2.2419e-10, 0, 2.53294e-10, 1, 0, -4.65661e-10, -4.65661e-10, 1, 1.03187e-07, 7.39689e-05, -2.55952e-07)
+mesh_library = ExtResource("5_ds4iq")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(-131020, 65515, 1048576, -131023, 65515, 1048576, -131020, 65521, 1048576, -131025, 65520, 1048576, -131025, 65525, 1048576, -131022, 65526, 1048576, -131023, 65519, 1048576, -131028, 65524, 1048576, -131025, 65528, 1048576)
+}
+metadata/_editor_floor_ = Vector3(0, -1, 0)
+
+[node name="Fence" type="GridMap" parent="Graveyard"]
+transform = Transform3D(1, -5.74801e-10, 0, 5.99812e-10, 1, 0, -1.16415e-09, -1.16415e-09, 1, 1.0327e-07, 7.40285e-05, -2.56159e-07)
+mesh_library = ExtResource("6_v0by5")
+cell_center_y = false
+cell_scale = 0.95
+data = {
+"cells": PackedInt32Array(21, 65524, 1048576, 23, 65524, 1048576, 25, 65524, 1048576, 27, 65524, 1048576, 27, 65526, 0, 27, 65528, 0, 27, 65530, 0, 27, 65532, 0, 27, 65534, 0, 25, 65534, 1441792, 23, 65534, 1441792, 21, 65534, 1441792, 19, 65534, 1441792, 19, 65532, 655360, 19, 65524, 655360, 19, 65526, 655360, 19, 65530, 655360)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="coffin" parent="Graveyard" instance=ExtResource("7_pyt0p")]
+transform = Transform3D(-0.176359, 0.982072, -0.0665812, 0.978591, 0.182221, 0.0956839, 0.106101, -0.048281, -0.993183, 42.2507, -0.618066, -19.3859)
+
+[node name="church" parent="Graveyard" instance=ExtResource("8_upsnh")]
+transform = Transform3D(1.90269e-06, -0.00206527, -0.999998, 0.00485523, 0.999986, -0.00206524, 0.999988, -0.00485522, 1.19307e-05, 45.4291, -0.261532, -0.0891533)
+
+[node name="Decorations" type="Node3D" parent="."]
+
+[node name="campfire" parent="Decorations" instance=ExtResource("9_1wuih")]
+
+[node name="warmth2" parent="Decorations/campfire" instance=ExtResource("10_yaels")]
+transform = Transform3D(-0.0986572, -0.00191076, -0.995121, 0.00497598, 0.999985, -0.00241343, 0.995111, -0.0051898, -0.0986465, -0.378409, 2.07653, 0.311527)
+
+[node name="Mines" type="Node3D" parent="."]
+
+[node name="workbench" parent="Mines" instance=ExtResource("11_1ddc0")]
+transform = Transform3D(0.539286, -0.00227127, -0.84212, 0.00355665, 0.999994, -0.000419424, 0.842115, -0.00276893, 0.539291, 28.9421, -0.134394, -82.1665)
+
+[node name="dynamite" parent="Mines" instance=ExtResource("12_q1vv3")]
+transform = Transform3D(1, -0.00074341, 0.000355335, 0.000581434, 0.942228, 0.334974, -0.000583831, -0.334973, 0.942228, 35.5834, 2.77995, -89.9172)
+
+[node name="minecaft" parent="Mines" instance=ExtResource("13_j5m1e")]
+transform = Transform3D(1, -1.86037e-09, 0, 1.87174e-09, 1, 0, -3.72529e-09, -3.72529e-09, 1, 35.6747, 0.448796, -89.0686)
+
+[node name="pickaxe" parent="Mines" instance=ExtResource("14_8lvh5")]
+transform = Transform3D(0.499624, 0.00209838, 0.86624, -0.556988, 0.76665, 0.319398, -0.663432, -0.642063, 0.384205, 30.4288, 1.50302, -90.1315)
+
+[node name="shovel" parent="Mines" instance=ExtResource("15_fwhy2")]
+transform = Transform3D(-0.866018, -0.499984, 0.00542785, 0.500008, -0.866003, 0.00546051, 0.00197036, 0.00744288, 0.99997, 31.8392, 0.840284, -63.7992)
+
+[node name="shovel2" parent="Mines" instance=ExtResource("15_fwhy2")]
+transform = Transform3D(-0.00306803, -0.999981, 0.0054459, 0.999994, -0.00305961, 0.00148572, -0.00146903, 0.00545043, 0.999984, 29.4163, 1.25284, -82.2351)
+
+[node name="store" parent="." instance=ExtResource("16_o0vy0")]
+transform = Transform3D(-0.799998, 0.00223197, -7.79505e-06, 0.00223197, 0.799978, -0.00553636, -7.65175e-06, -0.00553636, -0.799981, 14.6483, 0.0464419, 29.781)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="store"]
+transform = Transform3D(1, 2.98315e-11, 3.33392e-20, -2.98315e-11, 1, 0, -3.33392e-20, -9.94557e-31, 1, 3.3679, 3.84677, -0.0199852)
+omni_attenuation = -0.316
+
+[node name="Housing" type="Node3D" parent="."]
+transform = Transform3D(1, -2.2419e-10, 0, 2.53294e-10, 1, 0, -4.65661e-10, -4.65661e-10, 1, -81.1875, -0.0272822, -40.6149)
+
+[node name="cabin" parent="Housing" instance=ExtResource("52_6yguv")]
+transform = Transform3D(1.2, 1.09139e-11, 2.32831e-10, 2.56478e-10, 1.2, 4.65661e-10, 0, 0, 1.2, 0.019371, 0.0337799, 9.77002)
+
+[node name="cabin2" parent="Housing" instance=ExtResource("51_admqt")]
+transform = Transform3D(1.3, 1.33696e-09, 3.25963e-09, 3.10956e-09, 1.3, 6.51926e-09, -2.32831e-10, -6.51926e-09, 1.3, 0.000274658, 0.197018, -0.000644684)
+
+[connection signal="area_entered" from="Decorations/campfire/warmth2" to="Player" method="_on_warmth_area_entered"]
+[connection signal="area_exited" from="Decorations/campfire/warmth2" to="Player" method="_on_warmth_area_exited"]

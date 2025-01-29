@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmh06svwsaoyw"]
+
+[ext_resource type="PackedScene" uid="uid://cjirltosbh3s1" path="res://Assets/models/Mines/minecaft.glb" id="1_s71u3"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_usl32"]
+points = PackedVector3Array(-0.474746, -0.439261, -1.27923, -0.600039, -0.317899, -1.27923, -0.477486, -0.258718, -1.71539, 0.539742, -0.439261, -1.27923, -0.474746, -0.439261, 1.23168, -1, 2.34688, -2.33535, -0.602193, -0.173356, -1.62807, -0.600039, -0.317899, 1.23168, -0.483947, 0.177639, -1.89598, 0.542482, -0.258718, -1.71539, 0.665035, -0.317899, -1.27923, 0.539742, -0.439261, 1.23168, -0.477486, -0.258718, 1.6683, 1, 2.34688, -2.33535, -1, 2.34688, 2.33535, -0.602193, -0.173356, 1.58098, 0.548943, 0.177639, -1.89598, 0.672475, 0.17573, -1.77254, 0.667189, -0.173356, -1.62807, 0.665035, -0.317899, 1.23168, 0.542482, -0.258718, 1.6683, -0.483947, 0.177639, 1.84889, 1, 2.34688, 2.33535, 0.667189, -0.173356, 1.58098, 0.548943, 0.177639, 1.84889)
+
+[node name="minecaft" instance=ExtResource("1_s71u3")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cart" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cart/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_usl32")

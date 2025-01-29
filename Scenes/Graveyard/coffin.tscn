@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=4 uid="uid://brqddxw3hsor7"]
+
+[ext_resource type="PackedScene" uid="uid://bxyxkvaktljwr" path="res://Assets/models/Graveyard/coffin.glb" id="1_fcemy"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yb1p2"]
+load_path = "res://.godot/imported/coffin_Bark_64_C.png-c82be6c5693baaaba95ae4988b62cbb1.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2tsia"]
+load_path = "res://.godot/imported/coffin_Bark_64_N.png-84ae734f25fb58486ba7067203f61c98.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qlfk4"]
+resource_name = "Coffin"
+cull_mode = 2
+albedo_texture = SubResource("CompressedTexture2D_yb1p2")
+metallic_specular = 0.0
+normal_enabled = true
+normal_texture = SubResource("CompressedTexture2D_2tsia")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_al7vj"]
+_surfaces = [{
+"aabb": AABB(-0.319205, 0.0902479, -0.793954, 0.638409, 4.44974, 1.58791),
+"format": 34896613377,
+"index_count": 60,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABQAKAAcABQALAAoACgAIAAkACgALAAgAAwAIAAEAAwAJAAgAAQALAAUAAQAIAAsABwAJAAMABwAKAAkA"),
+"name": "Coffin",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("shEAAPvLAAAAAJ+n//8AALIRAAADNAAAAACfpwAAAABM7gAA+8sAAP//n6f//wAATO4AAAM0AAD//5+nAAAAAM0W//92yAAAzRb//4g3AAAx6f//iDcAADHp//92yAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vuos7"]
+resource_name = "coffin_Cube_001"
+_surfaces = [{
+"aabb": AABB(-0.319205, 0.0902479, -0.793954, 0.638409, 4.44974, 1.58791),
+"attribute_data": PackedByteArray("Vu9Qff/////xfid9ifBW0onwVtIyds/SMnbP0pLOUH3//0fkfpgnfWDNVtJgzVbSPaHP0j2hz9Jt4FB9FfH//xXEJ30731bSO99W0tTMz9LUzM/SfN1QfRXxR+SIqid9rt5W0q7eVtLJoc/SyaHP0v7u//8V8a/jiH///+vO//8V8T/J55f//yTd//9O/z/JH6v//8Xg//9O/6/jfsP//w=="),
+"format": 34896613399,
+"index_count": 60,
+"index_data": PackedByteArray("AgANAAYAAgAJAA0ABwAZAAsABwAVABkAFwAUABsAFwAQABQADgAEABIADgAAAAQACAAPABYACAABAA8AEwAkABoAEwAnACQAIwAdACAAIwAmAB0ADAAeAAUADAAhAB4AAwAlABEAAwAcACUAGAAfAAoAGAAiAB8A"),
+"material": SubResource("StandardMaterial3D_qlfk4"),
+"name": "Coffin",
+"primitive": 3,
+"uv_scale": Vector4(2.1997, 2.02781, 0, 0),
+"vertex_count": 40,
+"vertex_data": PackedByteArray("shEAAPvL//+yEQAA+8v//7IRAAD7y4//AACfp/////8AAJ+n/////wAAn6f//+7+AACfp///j/+yEQAAAzSA+7IRAAADNP//shEAAAM0j/8AAJ+nAAAC9wAAn6cAAID7AACfpwAA7v4AAJ+nAACP/0zuAAD7y///TO4AAPvL//9M7gAA+8uP////n6f///////+fp////////5+n///u/v//n6f//4//TO4AAAM0gPtM7gAAAzT//0zuAAADNI////+fpwAAAvf//5+nAACA+///n6cAAO7+//+fpwAAj//NFv//dsj//80W//92yP+/zRb//3bI7v7NFv//iDcC980W//+IN/+/zRb//4g37v4x6f//iDcC9zHp//+IN/+/Men//4g37v4x6f//dsj//zHp//92yP+/Men//3bI7v7/f0x5/3//Pz1AhH//f8KM/39MedL+aT89QIR/AAD/f/9//z89QIR/////fwAA/3/S/mk/PUCEf/9/THn/f/8/ewA8wP9/woz/f0x5ab8rgXsAPMAAAP9//3//P3sAPMD///9/AAD/f2m/K4F7ADzA/3/CjP///3/S/mk/////f////3/S/mk/////f////39pvyuB/3/CjP///39pvyuB")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_al7vj")
+
+[node name="coffin" instance=ExtResource("1_fcemy")]
+
+[node name="Cube" parent="." index="0"]
+mesh = SubResource("ArrayMesh_vuos7")

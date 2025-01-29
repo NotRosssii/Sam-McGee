@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://bupd44d8poepp"]
+
+[ext_resource type="Script" path="res://scripts/UI.gd" id="1_bx3h4"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="ui" type="CanvasLayer" parent="."]
+script = ExtResource("1_bx3h4")
+
+[node name="Sprite3D" type="Sprite3D" parent="ui"]
+modulate = Color(0, 1, 0, 1)
+billboard = 1
+no_depth_test = true
+texture_filter = 0
+
+[node name="Sprite3D2" type="Sprite3D" parent="ui"]
+modulate = Color(0, 1, 1, 1)
+billboard = 1
+no_depth_test = true
+texture_filter = 0
+
+[node name="Health" type="ProgressBar" parent="ui"]
+modulate = Color(0, 1, 0, 1)
+anchors_preset = -1
+anchor_left = 0.01875
+anchor_top = 0.0208333
+anchor_right = 0.161979
+anchor_bottom = 0.0905855
+grow_vertical = 0
+size_flags_horizontal = 4
+mouse_filter = 1
+step = 1.0
+value = 100.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Temperature" type="ProgressBar" parent="ui"]
+modulate = Color(0, 1, 1, 1)
+anchors_preset = -1
+anchor_left = 0.01875
+anchor_top = 0.104441
+anchor_right = 0.161979
+anchor_bottom = 0.174193
+grow_vertical = 0
+size_flags_horizontal = 4
+mouse_filter = 1
+step = 1.0
+value = 100.0
+metadata/_edit_use_anchors_ = true

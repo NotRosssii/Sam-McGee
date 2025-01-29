@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dki0p76458rei"]
+
+[ext_resource type="PackedScene" uid="uid://cjyl8j2svyamm" path="res://Assets/models/ration/ration.glb" id="1_t6xou"]
+
+[node name="ration" instance=ExtResource("1_t6xou")]
+
+[node name="Cylinder" parent="." index="0"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://byjg3s80f3gv5"]
+
+[ext_resource type="PackedScene" uid="uid://c4gqm75kx2w4t" path="res://Assets/models/Mines/dynamite.glb" id="1_2qs0s"]
+
+[node name="dynamite" instance=ExtResource("1_2qs0s")]

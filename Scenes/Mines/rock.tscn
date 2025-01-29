@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=4 uid="uid://uxort51yiqxm"]
+
+[ext_resource type="PackedScene" uid="uid://crwr0vpms6aha" path="res://Assets/models/Mines/rock.glb" id="1_oak6r"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cevu4"]
+load_path = "res://.godot/imported/rock_Rock035_1K-PNG_Color.png-5470ed182d5e582b484d49e9b24dfb1b.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mkdaw"]
+load_path = "res://.godot/imported/rock_Rock035_1K-PNG_NormalGL.png-46143d3e78e968f65e5aefd6df0e1378.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q8ufb"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = SubResource("CompressedTexture2D_cevu4")
+metallic_specular = 0.0
+normal_enabled = true
+normal_texture = SubResource("CompressedTexture2D_mkdaw")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_s5qx6"]
+_surfaces = [{
+"aabb": AABB(-0.17825, -0.174392, -0.199594, 0.387112, 0.347546, 0.331282),
+"format": 34896613377,
+"index_count": 60,
+"index_data": PackedByteArray("AAACAAEAAQAFAAAAAAADAAIAAAAEAAMAAAAFAAQAAQAKAAUAAgAGAAEAAwAHAAIABAAIAAMABQAJAAQAAQAGAAoAAgAHAAYAAwAIAAcABAAJAAgABQAKAAkABgALAAoABwALAAYACAALAAcACQALAAgACgALAAkA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("4HUAADyaAABi7SBWh80AAF1U01rB9QAAAACIVY64AACVZWBSAAAAAJ3liDNeOwAAwJ8bwGz1AADCHr69//8AAOEvlrqURwAAoptiuaopAAD//2DNPJoAAOB1//88mgAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_iklw1"]
+resource_name = "rock_Icosphere"
+_surfaces = [{
+"aabb": AABB(-0.17825, -0.174392, -0.199594, 0.387112, 0.347546, 0.331282),
+"attribute_data": PackedByteArray("/3/Alm/1Gd5v9Rneb/UZ3v9/wJa/12u+v9drvr/Xa74Q3UuBEZV3vonTQumJ00LpidNC6YnTQumJ00LpVN///1Tf////f3e+/393vjP/doRirtqe/3979f9/e/VirtqeYq7anpae/3//f9HOb/XLvv9/0c7/f9HO6Ncem8K6e9XCunvV6Ncem+jXHpsQ3Wu+HbxN+R28TfkQ3dSLEN3Ui///8Krkn//////wql+nKrz///CqDaDd6Q2g3ekNoN3pifprvg2g3emcv6WACbGdxpy/pYAJsZ3GCbGdxsK6gqjCuoKowroW6hDdJbEQ3SWx"),
+"format": 34896613399,
+"index_count": 60,
+"index_data": PackedByteArray("AQALAAUABwAbAAIAAwAPAA0ABAAXABEAAAAZABQACQA2AB0ADAAgAAYAEAAlAA4AGAArABIAGgAuABUACAAiADQACgAkAB8AEwAsACcAFgAxACkAHAA1AC8AIQA4ADIAIwA3AB4AKgA7ACYAMAA6ACgAMwA5AC0A"),
+"material": SubResource("StandardMaterial3D_q8ufb"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(1.78758, 2, 0, 0),
+"vertex_count": 60,
+"vertex_data": PackedByteArray("4HUAADyaKeDgdQAAPJpixeB1AAA8mkzI4HUAADyapc/gdQAAPJpL72LtIFaHzWLFYu0gVofNEMJi7SBWh81MyGLtIFaHzW7OYu0gVofN/NRdVNNawfXiwV1U01rB9WLFXVTTWsH1EMJdVNNawfWlz11U01rB9ZrKAACIVY64pc8AAIhVjriaygAAiFWOuEvvAACIVY64f/UAAIhVjrhY9ZVlYFIAACnglWVgUgAAq/mVZWBSAACY7JVlYFIAAEvvlWVgUgAAf/Wd5YgzXjsp4J3liDNeO6v5neWIM147TMid5YgzXjsb+J3liDNeO/zUwJ8bwGz1XsvAnxvAbPXiwcCfG8Bs9RDCwJ8bwGz12tHAnxvAbPVuzsIevr3//17Lwh6+vf//4sHCHr69//+aysIevr3//xb7wh6+vf//WPXhL5a6lEdh7uEvlrqUR5js4S+WupRHFvvhL5a6lEd/9eEvlrqUR1j1optiuaopke+im2K5qimr+aKbYrmqKRv4optiuaopYe6im2K5qimY7P//YM08mtrR//9gzTyake///2DNPJpuzv//YM08mhv4//9gzTya/NTgdf//PJpey+B1//88mtrR4HX//zyake/gdf//PJph7uB1//88mhb7m0rRUPNqU16bZNZGu1h/bHtKeF7zalNeZYK7a5tk1kYTo6x04iMCMg2BnHjzalNeZYK7a7tYf2ywWZmBu1h/bLBZmYF7SnheouMDwcNQ+56bStFQujJ2PWO50r17SnheouMDwZtK0VC6MnY9m2TWRr8tQDbiIwIyhJ8MoA2BnHhlgrtrC6gHmhOjrHSEnwygDYGceLBZmYEG2J0lw1D7nvvIkiljudK9BtidJaLjA8HDUPueGqoMsboydj2/LUA2+8iSKWO50r0LqAeaGqoMsROjrHS/LUA24iMCMoSfDKALqAeaGqoMsfvIkikG2J0l")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_s5qx6")
+
+[node name="rock" instance=ExtResource("1_oak6r")]
+
+[node name="Icosphere" parent="." index="0"]
+mesh = SubResource("ArrayMesh_iklw1")

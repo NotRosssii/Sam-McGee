@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=4 uid="uid://c7hp734w4l2po"]
+
+[ext_resource type="PackedScene" uid="uid://b0jsa3h1y72fx" path="res://Scenes/Store/crate.glb" id="1_iipop"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6a6ou"]
+load_path = "res://.godot/imported/crate_wood_32.png-e91d341e38f1f231b68a6882719bcca5.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cker7"]
+load_path = "res://.godot/imported/crate_wood_n_32.png-369a87c5a2c1f94db674f4fbe9dd9a30.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7puhm"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = SubResource("CompressedTexture2D_6a6ou")
+metallic_specular = 0.0
+normal_enabled = true
+normal_texture = SubResource("CompressedTexture2D_cker7")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_htfhm"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD/////AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lgaik"]
+resource_name = "crate_Cube_001"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"attribute_data": PackedByteArray("qqqpqgAAVVVUVaqqVVWpqlVVAAAAAKqqVFVUVVRVVFVUVf//AABVVamqAAAAAP//qapUVQAAAACpqv7/VVVVVVVVVFVVVf//VFWpqlRVAACpqqqqAACpqqqqVFVVVaqq"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AgALAAUAAgAIAAsABgAVAAkABgASABUAFAARABcAFAAOABEADAADAA8ADAAAAAMABwANABMABwABAA0AFgAEAAoAFgAQAAQA"),
+"material": SubResource("StandardMaterial3D_7puhm"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP///78AAAAA//9U1QAAAAD//1TVAAD//////78AAP////9U1QAA/////1TVAAAAAAAA//8AAAAAAABU1QAAAAAAAFTVAAD//wAA//8AAP//AABU1QAA//8AAFTV//8AAP///7///wAA//9U1f//AAD//1TV/////////7////////9U1f///////1TV//8AAAAA/////wAAAABU1f//AAAAAFTV/////wAA////////AABU1f////8AAFTV/3//f1VVVFVUVamq/3//f1TVqipUVamq/7//P1VVVFVUVaqq/7//P1TVqipUVamq/3//f1VVVFWqqlVV/3//f1TVqiqqqlVV/z//v1RVVFWqqlVV/7//P1TVqiqqqlVV")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_htfhm")
+
+[node name="crate" instance=ExtResource("1_iipop")]
+
+[node name="Cube" parent="." index="0"]
+mesh = SubResource("ArrayMesh_lgaik")

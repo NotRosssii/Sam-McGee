@@ -1,0 +1,30 @@
+[remap]
+
+importer="3d_texture"
+type="CompressedTexture3D"
+uid="uid://b1sf6pww0plyu"
+path.s3tc="res://.godot/imported/cabin_TH_Rough_Wood_baseColor.png-e34cb662e12e8c3b3049b79d5646954a.s3tc.ctex3d"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "2932ace36eaf9e13820929df1580eb0b"
+}
+
+[deps]
+
+source_file="res://Assets/models/buildings/cabin_TH_Rough_Wood_baseColor.png"
+dest_files=["res://.godot/imported/cabin_TH_Rough_Wood_baseColor.png-e34cb662e12e8c3b3049b79d5646954a.s3tc.ctex3d"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+slices/horizontal=8
+slices/vertical=8

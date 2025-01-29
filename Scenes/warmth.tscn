@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8gqu55633ebh"]
+
+[ext_resource type="Script" path="res://scripts/warmth.gd" id="1_4tnxp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q8fgi"]
+size = Vector3(4, 4, 4)
+
+[node name="warmth" type="Area3D"]
+collision_mask = 3
+script = ExtResource("1_4tnxp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_q8fgi")

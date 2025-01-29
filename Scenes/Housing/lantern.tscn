@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://0ggkqbey2mt0"]
+
+[ext_resource type="PackedScene" uid="uid://dqr32dq1b2v8c" path="res://Assets/models/Housing/lantern/lantern.glb" id="1_wmref"]
+
+[node name="lantern" instance=ExtResource("1_wmref")]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+light_color = Color(0.984119, 0.876411, 0.804727, 1)
+spot_angle = 53.64
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." index="3"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1, 0)
+light_color = Color(0.984119, 0.876411, 0.804727, 1)
+spot_angle = 63.72
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="." index="4"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 1, 0)
+light_color = Color(0.984119, 0.876411, 0.804727, 1)
+spot_angle = 62.28
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="." index="5"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1, 0)
+light_color = Color(0.984119, 0.876411, 0.804727, 1)
+spot_angle = 55.08

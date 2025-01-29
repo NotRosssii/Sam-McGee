@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfskpj4ruffmo"]
+
+[ext_resource type="PackedScene" uid="uid://eaktofwa5bup" path="res://Assets/models/plants/calathea.fbx" id="1_4rumi"]
+[ext_resource type="PackedScene" uid="uid://dt3dte1iqtjy" path="res://Assets/models/plants/sanseveria.fbx" id="2_aw3b2"]
+
+[node name="calathea" instance=ExtResource("1_4rumi")]
+
+[node name="sanseveria" parent="." index="1" instance=ExtResource("2_aw3b2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.749907, 0.00892639, -1.56963)

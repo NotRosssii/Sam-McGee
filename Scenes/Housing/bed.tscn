@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=4 uid="uid://duh2jnt66unqw"]
+
+[ext_resource type="PackedScene" uid="uid://p75uwp42bj5b" path="res://Assets/models/Housing/bed/bed.glb" id="1_1ofdb"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_p7w8j"]
+points = PackedVector3Array(-2.25868, -0.192166, -0.775694, -2.08977, -0.501986, -0.633099, -2.25868, -0.192166, 0.775694, -2.25868, 0.192119, -0.775694, 2.25868, -0.192166, -0.775694, -2.08977, -0.501986, 0.660433, 2.16671, -0.501986, -0.633099, -2.25868, 0.192119, 0.775694, 2.25868, -0.192166, 0.775694, 2.25868, 0.192119, -0.775694, 2.16671, -0.501986, 0.660433, 2.25868, 0.192119, 0.775694)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_53jce"]
+load_path = "res://.godot/imported/bed_Pillow_C.png-3007b9955ae9d3fb0b7b34b41bf3d145.s3tc.ctex"
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_kpn8j"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_tbmbl"]
+width = 64
+height = 64
+in_3d_space = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_kpn8j")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s3ckw"]
+resource_name = "Pillow"
+cull_mode = 2
+albedo_texture = SubResource("CompressedTexture2D_53jce")
+metallic_specular = 0.0
+normal_enabled = true
+normal_texture = SubResource("NoiseTexture2D_tbmbl")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_o8i06"]
+_surfaces = [{
+"aabb": AABB(-0.35516, -0.159554, -0.630332, 0.710321, 0.319107, 1.26066),
+"format": 34896613377,
+"index_count": 144,
+"index_data": PackedByteArray("AAAUAAkAAAAIABQACQAKAAEACQAUAAoAFAADAAoAFAALAAMACAALABQACAACAAsAAgAVAAsAAgAMABUACwANAAMACwAVAA0AFQAHAA0AFQAOAAcADAAOABUADAAGAA4ABgAWAA4ABgAPABYADgAQAAcADgAWABAAFgAFABAAFgARAAUADwARABYADwAEABEABAAXABEABAASABcAEQATAAUAEQAXABMAFwABABMAFwAJAAEAEgAJABcAEgAAAAkAAgAYAAwAAgAIABgADAAPAAYADAAYAA8AGAAEAA8AGAASAAQACAASABgACAAAABIABwAZAA0ABwAQABkADQAKAAMADQAZAAoAGQABAAoAGQATAAEAEAATABkAEAAFABMA"),
+"name": "Pillow",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 26,
+"vertex_data": PackedByteArray("EjjPGeXLAACPLkeyL8wAAPc4mh5tMwAAdS8St7czAACJ0OxIR8wAAAfHZOGRzAAAb9G3Tc8zAADsxy/mGTQAANsoVgaXfwAAgiJbYLTcAABCHTfA8X8AAJojM2bTIgAAV4b6JeEiAAC/etvfPCMAAHzdo59KIwAAvOLHPw2AAAAj16j5Z4AAAGTcy5kr3QAAP4UjIMLcAACneQTaHd0AAAAAcVitfwAAwIAFhAAAAAD//42nUYAAAD5/+Xv//wAA+4cAAMF/AAADeP//PYAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_v6wa2"]
+resource_name = "bed_Cube_006"
+_surfaces = [{
+"aabb": AABB(-0.35516, -0.159554, -0.630332, 0.710321, 0.319107, 1.26066),
+"attribute_data": PackedByteArray("rqx62KWoqkVZV3rY///2gLubYuC7m2LgEPFi4AAALp0Q8WLg7g5i4O4OYuCpqi6dQ2TCPUNkwj1UVfaAEPHCPVRV9oAQ8cI9//8unWZGwj1mRsI9rqyqRVBTetgEAqpFP8sA4T/LAOE/ywDhVVU3s6mq7WrqdQDh6nUA4ep1AOEAAFz1c90Sj7Oo2ryzqNq89gHavPYB2rz//1z1HogSjwj+2rxUVccoCP7avIsiEo+qqu1qvzQA4b80AOG/NADhVVU3s5UgJD2VICQ9lSAkPVRVxyhz3RKPXlNJYV5TSWE/yyQ9P8skPT/LJD0AAO1qS1dJYUtXSWH//8coyTISjxSKJD0UiiQ9qqo3sxSKJD0I/klh4HcSjwj+SWGpqlz14NL//9h6LLLYeiyy2HosstEvLLI2KCUe0S8sstEvLLLg0iUegyX4a4Ml+GuDJfhrJoX4ayaF+Gsmhfhri33//3OCJR4t0CyyLdAssi3QLLIt0PhrLdD4ax4t//8t0Phr"),
+"format": 34896613399,
+"index_count": 144,
+"index_data": PackedByteArray("AgBJAB4AAgAbAEkAHwAjAAUAHwBLACMASgALACIASgAnAAsAGgAmAEgAGgAIACYABwBOACQABwArAE4AJQAvAAoAJQBPAC8ATAAWAC0ATAAwABYAKQAxAE0AKQATADEAFABTADMAFAA3AFMAMgA7ABcAMgBRADsAUAARADoAUAA+ABEANgA/AFIANgAOAD8ADQBVAD0ADQBBAFUAPABFABAAPABUAEUAVwAEAEcAVwAdAAQAQwAcAFYAQwABABwABgBaACoABgAYAFoAKAA1ABIAKABZADUAWAAMADQAWABAAAwAGQBCAFsAGQAAAEIAFQBdACwAFQA5AF0ALgAgAAkALgBeACAAXwADACEAXwBGAAMAOABEAFwAOAAPAEQA"),
+"material": SubResource("StandardMaterial3D_s3ckw"),
+"name": "Pillow",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 96,
+"vertex_data": PackedByteArray("EjjPGeXLYNMSOM8Z5csK9BI4zxnly6znjy5Hsi/MitCPLkeyL8wWw48uR7IvzAXV9ziaHm0zTtX3OJoebTMk3/c4mh5tMyDrdS8St7czmcd1LxK3tzPn3XUvEre3M13cidDsSEfM9PqJ0OxIR8xn/4nQ7EhHzDfzB8dk4ZHMPtYHx2Thkcxk7wfHZOGRzDvob9G3Tc8zic5v0bdNzzN++m/Rt03PM5r07Mcv5hk0q9fsxy/mGTT63OzHL+YZNFbL2yhWBpd/gdXbKFYGl3+l09soVgaXf0fr2yhWBpd/I+aCIltgtNzX8oIiW2C03BzEgiJbYLTc/OeCIltgtNwV1UIdN8Dxf9PIQh03wPF/S9BCHTfA8X+x3EIdN8DxfzDVmiMzZtMiWt+aIzNm0yI53pojM2bTIi/rmiMzZtMiTNxXhvol4SJGzleG+iXhImf7V4b6JeEiNtVXhvol4SLG3r962988I5bXv3rb3zwjnNy/etvfPCNPyL962988I3LefN2jn0ojMN183aOfSiMI+3zdo59KIwLLfN2jn0ojkPS84sc/DYA897zixz8NgBnOvOLHPw2AUPS84sc/DYDK9CPXqPlngHXWI9eo+WeA2dcj16j5Z4B86CPXqPlngHjKZNzLmSvdb+1k3MuZK92E/2Tcy5kr3S7oZNzLmSvdn/M/hSMgwtyn/D+FIyDC3Hn9P4UjIMLcidM/hSMgwtwE8qd5BNod3V7Wp3kE2h3dFuyneQTaHd2n0Kd5BNod3ULBAABxWK1/TusAAHFYrX9/5gAAcVitf53cAABxWK1/N9XAgAWEAADR3MCABYQAALr7wIAFhAAA+97AgAWEAACm3v//jadRgG3o//+Np1GAVcr//42nUYB+9P//jadRgL/0Pn/5e///5uo+f/l7//+Q/j5/+Xv//0rxPn/5e///ScL7hwAAwX8G+fuHAADBf/DN+4cAAMF/aNX7hwAAwX+/0wN4//89gIrWA3j//z2Aw9cDeP//PYBRyQN4//89gGnQtlUaV39u41vtzabrup/Is9z4Czas8nnDYFA5VjsuH2kKRwxpi/ovXXj8dJ1J8l27NDJW7GmUfV7Lpf1eiaZeqneTf6I5saqUgVM/TUwyq9Snqk1auKt8q27YcJFhyLxiqFATVgRW9FYuR+ho18y87OhtNlwd+BQ1Jc5u677ydcO19nVXB6Cus8fyNLvd8m7DCS+CaPT90ZwXR/9oMPJmuwNTcE1eM9/VP1BLVsAsQWrTq26rTdoDkDf4tVn8/l+catc1ku8yYdUkyL5hoKpFWl8wfOmtUpJNWaazX8iqdlpQpnqqfaubqw2x1pS8xxBgapT7oSYhHutCsaGUAKZBXw0zqe2Rk9hd5FUDV4Ftblxnpm+qEpWgoZaf1LNF+t43NEfiaBnNeuyq8j675fJswzzZ0pDBM07Wly2caef/+psXscyUoMeeX3Cm0V/Aqm1ap5VQoQuUNl4lbaBcd/nTNkAx2+pdUrJNhVAmViFW5lY7poSqmauMq2P1fVXin7qz")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_o8i06")
+
+[node name="bed" instance=ExtResource("1_1ofdb")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Bed" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bed/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_p7w8j")
+
+[node name="Pillow" parent="." index="1"]
+mesh = SubResource("ArrayMesh_v6wa2")
