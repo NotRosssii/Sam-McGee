@@ -1,7 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://dyku1qhfeu8x3"]
+[gd_scene load_steps=15 format=3 uid="uid://dyku1qhfeu8x3"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_a7rqn"]
 [ext_resource type="PackedScene" uid="uid://cafsegbyfus55" path="res://Scenes/hatchet.tscn" id="2_dskbq"]
+[ext_resource type="Shader" path="res://scripts/PS1.gdshader" id="3_m5j5r"]
+[ext_resource type="Script" path="res://scripts/color_rect.gd" id="4_s1gsn"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_87n18"]
 
@@ -9,6 +11,14 @@
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_q1av2"]
 points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607, 0.498884, 0.169713, 0.559144, 0.464172, 0.231051, -0.803591, 0.320455, 0.40741, 0.651043, -0.243523, -0.482789, 0.594843, 0.0822132, -0.362868, -0.682312, 0.289697, 0.469044, -0.654529, -0.0662713, -0.127444, 0.842701, -0.338103, -0.393435, -0.683942, -0.244717, 0.438255, 0.623309, 0.200849, 0.0841477, 0.977454, 0.114795, -0.0682023, -0.976458, -0.12927, 0.20055, -0.563129, -0.451454, -0.185527, 0.595453, -0.453475, -0.273363, 0.592268, 0.407754, -0.00693649, -0.476823, 0.49966, 0.375821, -0.588614, 0.316955, 0.111579, 0.563059, -0.481177, -0.41725, 0.527866, -0.270497, -0.484546, -0.596972, -0.0665097, -0.279747, 0.908561, 0.0533361, -0.250197, -0.880712, 0.205319, 0.263647, -0.902771, -0.127394, 0.293368, 0.871526, -0.157196, 0.373412, -0.526319, -0.328246, 0.499663, 0.476641, -0.00688856, 0.0531056, 0.875001, 0.324703, -0.154543, -0.590854, 0.465879, -0.0972799, -0.782358, -0.398188, -0.387649, -0.498171, 0.31565, -0.30068, -0.587995, -0.388901)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g6cvu"]
+shader = ExtResource("3_m5j5r")
+shader_parameter/pixel_resolution_x = 320
+shader_parameter/pixel_resolution_y = 240
+shader_parameter/dither_strength = 0.05
+shader_parameter/color_depth = 24.0
+shader_parameter/jitter_intensity = 0.0005
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kbw0i"]
 
@@ -236,6 +246,19 @@ transform = Transform3D(1, 0, 0, 0, 0.999855, -0.017051, 0, 0.017051, 0.999855, 
 [node name="Camera3D" type="Camera3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00371361, 0.132357, 0.00537491)
 fov = 80.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Head/Camera3D"]
+script = ExtResource("4_s1gsn")
+
+[node name="ColorRect" type="ColorRect" parent="Head/Camera3D/CanvasLayer"]
+material = SubResource("ShaderMaterial_g6cvu")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="WeaponPivot" type="Node3D" parent="Head/Camera3D"]
 transform = Transform3D(1, -1.20279e-19, 1.16415e-10, 0, 1, 1.03319e-09, -1.16415e-10, -1.03319e-09, 1, -2.32831e-09, 0, -1.20606e-07)
