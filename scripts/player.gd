@@ -3,7 +3,6 @@ extends CharacterBody3D
 class_name Player
 
 signal cold_updated(new_cold: float)
-@warning_ignore("unused_signal")
 
 var speed
 const WALK_SPEED = 5
@@ -44,6 +43,7 @@ func _unhandled_input(event):
 		camera.rotate_x(-event.relative.y * SENSITIVITY)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(60))
 
+#cold and bob
 func _physics_process(delta: float) -> void:
 	if in_warmth_zone:
 		current_cold = min(current_cold + cold_increase_rate * delta, max_cold)
@@ -106,8 +106,6 @@ func on_player_death() -> void:
 	if anim_player.has_animation("death"):
 		anim_player.play("death")
 		await anim_player.animation_finished
-	else:
-		print("Warning: No 'death' animation found!")
 
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO

@@ -5,7 +5,7 @@ var player_near = false
 
 
 func _process(_delta: float) -> void:
-	if player_near and Input.is_action_just_pressed("interact"):  # Default key is "E"
+	if player_near and Input.is_action_just_pressed("interact"):
 		print("Player collected the key:", log_id)
 		queue_free()  
 

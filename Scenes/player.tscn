@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_a7rqn"]
 [ext_resource type="PackedScene" uid="uid://cafsegbyfus55" path="res://Scenes/hatchet.tscn" id="2_dskbq"]
-[ext_resource type="Shader" path="res://scripts/PS1.gdshader" id="3_m5j5r"]
+[ext_resource type="Shader" path="res://shaders/PS1.gdshader" id="3_m5j5r"]
 [ext_resource type="Script" path="res://scripts/color_rect.gd" id="4_s1gsn"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_87n18"]
